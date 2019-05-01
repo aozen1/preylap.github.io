@@ -1,0 +1,11 @@
+body{
+
+background-color: gray;
+text-align: center;
+position:relative;
+top:100px;
+}
+.registration{
+	box-sizing: border-box;
+	size:100px;
+}
