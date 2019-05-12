@@ -1,118 +1,140 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Libra tech</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <script src="script/script.js"></script>
 
-  </head>
+<head>
+  <title>Libra tech</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+  <script src="script/script.js"></script>
+</head>
 
-  <body>
-    <div class="flex flex-column">
-      <header>
-        <div class="flex">
-          <div class="border">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/2000px-R_logo.svg.png"
-              id="logo"
-            />
+<body>
+  <div class="flex flex-column content-wrap">
+
+    <header class="header">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/2000px-R_logo.svg.png" id="logo" />
+
+      <h1 class="flex flex-center-all ">Libra Tech</h1>
+
+      <form class="flex">
+        <fieldset>
+          <legend>Lets get started:</legend>
+          <div class="flex form-row">
+            <div class="form-column-left">Username:</div>
+            <div class="form-column-right">
+              <input type="text" />
+            </div>
           </div>
-          <div class="flex flex-center-all border">
-            <h1>Libra Tech</h1>
+          <div class="flex form-row">
+            <div class="form-column-left">Email:</div>
+            <div class="form-column-right">
+              <input type="text" />
+            </div>
           </div>
-          <div class="border">
-            <form class="flex">
-              <fieldset>
-                <legend>Lets get started:</legend>
-                <div class="flex form-row">
-                  <div class="form-column-left">Username:</div>
-                  <div class="form-column-right">
-                    <input type="text"/>
-                  </div>
-                </div>
-                <div class="flex form-row">
-                  <div class="form-column-left">Email:</div>
-                  <div class="form-column-right">
-                    <input type="text" />
-                  </div>
-                </div>
-                <div class="flex">
-                  <div class="flex flex-center-all">
-                    <a href="#">Register?</a>
-                  </div>
-                  <div class="flex flex-center-all">
-                    <button type="button">Login</button>
-                  </div>
-                </div>
-              </fieldset>
-            </form>
+          <div class="flex">
+            <div class="flex flex-center-all">
+              <a href="registration-form/registration-form.html">Register?</a>
+            </div>
+            <div class="flex flex-center-all">
+              <button type="button">Login</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </header>
+
+    <nav class="navigation">
+      <ul class="menu">
+        <li><a class="" href="#">Home</a></li>
+
+        <li>
+          <a class="" href="#">Products</a>
+          <ul class="sub-menu">
+            <li><a class="" href="#">Product 1</a></li>
+            <li><a class="" href="#">Product 1</a></li>
+            <li><a class="" href="#">Product 1</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="" href="#">Contact Us</a>
+          <ul class="sub-menu">
+            <li><a class="" href="#">Contact 1</a></li>
+            <li><a class="" href="#">Contact 2</a></li>
+            <li><a class="" href="#">Contact 3</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <span>Search</span>
+          <span><input type="text"/></span>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="flex flex-center-all  slider">
+      <iframe src="https://flickrembed.com/cms_embed.php?source=flickr&layout=responsive&input=razer&sort=1&by=keywords&theme=default&scale=fill&speed=3000&limit=5&skin=alexis-light&autoplay=true"
+        scrolling="no" frameborder="0" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"><p><a  href="https://www.ilancashire.co.uk/careers/">UK Lancs</a></p><small>Powered by <a href="https://flickrembed.com">flickr embed</a>.</small></iframe>
+      <script type="text/javascript">
+        function showpics() {
+          var a = $("#box").val();
+          $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + a + "&tagmode=any&format=json&jsoncallback=?", function(a) {
+            $("#images").hide().html(a).fadeIn("fast"), $.each(a.items, function(a, e) {
+              $("<img/>").attr("src", e.media.m).appendTo("#images")
+            })
+          })
+        }
+      </script>
+    </section>
+
+    <section class="flex flex-center-all latest-products">
+      <div class=" product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDOVVvHIgmqDWlU2HUl-fzG2Uup3Nic7_G6JrFiwpjFPuwhhQG">
+        <span>250$</span>
+      </div>
+
+      <div class=" product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf95e3uYzApe0qVyTP2NpO5FZ5-kC_rcHcTWXypRimDB4ktaxI">
+        <span>300$</span>
+      </div>
+
+      <div class=" product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY0-9pJIfiic_Dm53Fj4JUscyeOQDZavunB-mBtufnKN5WUsgl">
+        <span>280$</span>
+      </div>
+
+      <div class=" product">
+        <img src="https://i.ebayimg.com/images/g/ynkAAOSwlzZa~~X5/s-l300.jpg">
+        <span>450$</span>
+      </div>
+
+      <div class=" product">
+        <img src="https://i.ebayimg.com/images/g/ynkAAOSwlzZa~~X5/s-l300.jpg">
+        <span>420$</span>
+      </div>
+
+      <div class=" product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRScgP72jr-5A-ilucMtCvOftS-B9y7JmepBpLpT6hS3HI-ZZ70">
+        <span>400$</span>
+      </div>
+    </section>
+
+    <section class="flex about-us">
+      <h1>About Us</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo eligendi dignissimos natus hic sequi harum aut, suscipit doloremque impedit, odio ut sint quia fugit optio fugiat a delectus autem cupiditate!t Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Voluptate pariatur tenetur fugiat quasi corrupti rerum officiis doloribus, cumque, culpa optio officia voluptatum fugit quis. Dolores ut hic nostrum, voluptas accusantium!</p>
+
+      <div class="flex flex-center-all">
+        <div class="container">
+          <h1> feel free to check us out we are available in the following areas ===></h1>
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe width="604" height="281" id="gmap_canvas" src="https://maps.google.com/maps?q=beirut&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
           </div>
         </div>
-      </header>
-      <section>
-        <div class="flex navigation">
-          <a class="flex flex-center-all border item" href="#">Home</a>
-          <a class="flex flex-center-all border item" href="#">Products</a>
-          <a class="flex flex-center-all border item" href="#">Contact Us</a>
-          <a class="flex flex-center-all border item">
-            <span>Search</span>
-            <span><input type="text"/></span>
-          </a>
-        </div>
-      </section>
-      <section>
-        <div class="flex flex-center-all border slider">
-          <div>
+    </section>
+  </div>
+</body>
 
-
-
-
-            <ul class="carousel">
-  <li class="carousel__slide" style="background-image:url('https://brain-images-ssl.cdn.dixons.com/9/4/10180949/u_10180949.jpg')"></li>
-  <li class="carousel__slide" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRky4Mjr-Bz6676F5OeUMqObd0-zuY0tLFaC0SWN-KGSF7jXIX')"></li>
-  <li class="carousel__slide" style="background-image:url('https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05962448.png')"></li>
-</ul>
-<ul class="carousel__pager">
-  <li> <a class="carousel__pager-item" data-slide-index="0" href="#"></a>
-  </li>
-  <li> <a class="carousel__pager-item" data-slide-index="1" href="#"></a>
-  </li>
-  <li> <a class="carousel__pager-item" data-slide-index="2" href="#"></a>
-  </li>
-</ul>
-
-
-
-</div>
-        </div>
-      </section>
-      <section>
-        <div class="flex flex-center-all latest-products">
-          
-          <div class="border product"><span>Product-1</span></div>
-          <div class="border product"><span>Product-2</span></div>
-          <div class="border product"><span>Product-3</span></div>
-          <div class="border product"><span>Product-4</span></div>
-          <div class="border product"><span>Product-5</span></div>
-          <div class="border product"><span>Product-6</span></div>
-        
-        </div>
-      </section>
-      <section>
-        <div class="about-us">
-          <h1>About Us</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo eligendi dignissimos natus hic sequi harum aut, suscipit doloremque impedit, odio ut sint quia fugit optio fugiat a delectus autem cupiditate!t Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate pariatur tenetur fugiat quasi corrupti rerum officiis doloribus, cumque, culpa optio officia voluptatum fugit quis. Dolores ut hic nostrum, voluptas accusantium!</p>
-          <div class="flex flex-center-all">
-            <div class="container">
-    <h1>Responsive Map</h1>
-    <div id="map_container"></div>
-    <div id="map"></div>
-  </div>  
-
-          </div>
-        </div>
-      </section>
-    </div>
-  </body>
 </html>
